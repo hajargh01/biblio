@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Member Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-green-700 text-white px-6 py-4 flex justify-between">
+      <span class="font-bold">Member Dashboard</span>
+      <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
+        Logout
+      </button>
+    </nav>
+
+    <main class="p-6">
+      <h1 class="text-2xl font-semibold mb-4">Welcome</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white p-4 rounded shadow">Available Books</div>
+        <div class="bg-white p-4 rounded shadow">My Emprunts</div>
+      </div>
+    </main>
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (user === undefined || user.role !== "MEMBER") {
+        window.location.href = "index.html";
+      }
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

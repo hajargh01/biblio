@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-700 text-white px-6 py-4 flex justify-between">
+      <span class="font-bold">Admin Dashboard</span>
+      <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
+        Logout
+      </button>
+    </nav>
+
+    <main class="p-6">
+      <h1 class="text-2xl font-semibold mb-4">Administration</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded shadow">Manage Livres</div>
+        <div class="bg-white p-4 rounded shadow">Manage Auteurs</div>
+        <div class="bg-white p-4 rounded shadow">Manage Catégories</div>
+        <div class="bg-white p-4 rounded shadow">Manage Adhérents</div>
+        <div class="bg-white p-4 rounded shadow">Manage Emprunts</div>
+      </div>
+    </main>
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+
+      if (user === undefined || user.role !== "ADMIN") {
+        window.location.href = "index.html";
+      }
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
