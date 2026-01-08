@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestion des Emprunts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="emprunts.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-700 text-white px-6 py-4 flex justify-between">
+      <span class="font-bold">Gestion des Emprunts</span>
+      <div class="space-x-3">
+        <a href="dashboard.html" class="underline">Dashboard</a>
+        <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <main class="p-6">
+      <div class="bg-white p-4 rounded shadow mb-6">
+        <h2 class="text-lg font-semibold mb-3">Nouvel Emprunt</h2>
+
+        <form
+          id="empruntForm"
+          class="grid grid-cols-1 md:grid-cols-4 gap-3 items-end"
+        >
+          <div class="flex flex-col">
+            <label class="mb-1">Adhérent</label>
+            <select
+              id="adherentId"
+              class="border p-2 rounded h-10"
+              required
+            ></select>
+          </div>
+
+          <div class="flex flex-col">
+            <label class="mb-1">Livre</label>
+            <select
+              id="livreId"
+              class="border p-2 rounded h-10"
+              required
+            ></select>
+          </div>
+
+          <div class="flex flex-col">
+            <label class="mb-1">Date Retour</label>
+            <input
+              id="dateRetour"
+              type="date"
+              required
+              class="border p-2 rounded h-10"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label class="mb-1 invisible">Action</label>
+            <button class="bg-blue-600 text-white rounded h-10 px-6">
+              Emprunter
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-3">Liste des Emprunts</h2>
+
+        <table class="w-full border">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border p-2">Adhérent</th>
+              <th class="border p-2">Livre</th>
+              <th class="border p-2">Emprunt</th>
+              <th class="border p-2">Retour prévu</th>
+              <th class="border p-2">Statut</th>
+              <th class="border p-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="empruntsTable"></tbody>
+        </table>
+
+        <div id="pagination" class="flex justify-between items-center mt-4">
+          <button
+            id="prevPage"
+            class="bg-gray-300 px-3 py-1 rounded disabled:opacity-50"
+          >
+            Previous
+          </button>
+
+          <span id="pageInfo" class="text-sm font-medium"></span>
+
+          <button
+            id="nextPage"
+            class="bg-gray-300 px-3 py-1 rounded disabled:opacity-50"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

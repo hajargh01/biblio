@@ -13,6 +13,11 @@ const db = {
       role: "MEMBER",
     },
   ],
+  livres: [],
+  auteurs: [],
+  categories: [],
+  adherents: [],
+  emprunts: [],
 };
 
 if (localStorage.getItem("db") === null) {

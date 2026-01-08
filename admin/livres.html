@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestion des Livres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="livres.js" defer></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-700 text-white px-6 py-4 flex justify-between">
+      <span class="font-bold">Gestion des Livres</span>
+      <div class="space-x-3">
+        <a href="dashboard.html" class="underline">Dashboard</a>
+        <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <main class="p-6">
+      <div class="bg-white p-4 rounded shadow mb-6">
+        <h2 class="text-lg font-semibold mb-3">Ajouter un Livre</h2>
+
+        <form id="bookForm" class="grid grid-cols-1 md:grid-cols-5 gap-3">
+          <input
+            id="titre"
+            placeholder="Titre"
+            required
+            class="border p-2 rounded"
+          />
+          <input
+            id="auteur"
+            placeholder="Auteur"
+            required
+            class="border p-2 rounded"
+          />
+          <input
+            id="annee"
+            type="number"
+            placeholder="Année"
+            required
+            class="border p-2 rounded"
+          />
+
+          <input
+            id="quantite"
+            type="number"
+            min="1"
+            placeholder="Quantité"
+            required
+            class="border p-2 rounded"
+          />
+          <button class="bg-blue-600 text-white rounded">Ajouter</button>
+        </form>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-3">Liste des Livres</h2>
+
+        <table class="w-full border">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border p-2">Titre</th>
+              <th class="border p-2">Auteur</th>
+              <th class="border p-2">Année</th>
+              <th class="border p-2">Quantité</th>
+              <th class="border p-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="booksTable"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

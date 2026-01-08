@@ -21,8 +21,8 @@ form.addEventListener("submit", function (e) {
   localStorage.setItem("currentUser", JSON.stringify(user));
 
   if (user.role === "ADMIN") {
-    window.location.href = "admin-dashboard.html";
+    window.location.href = "../admin/dashboard.html";
   } else {
-    window.location.href = "member-dashboard.html";
+    window.location.href = "../member/dashboard.html";
   }
 });

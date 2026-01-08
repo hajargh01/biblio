@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestion des Adhérents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="adherents.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-700 text-white px-6 py-4 flex justify-between">
+      <span class="font-bold">Gestion des Adhérents</span>
+      <div class="space-x-3">
+        <a href="dashboard.html" class="underline">Dashboard</a>
+        <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <main class="p-6">
+      <div class="bg-white p-4 rounded shadow mb-6">
+        <h2 class="text-lg font-semibold mb-3">Ajouter un Adhérent</h2>
+
+        <form id="adherentForm" class="grid grid-cols-1 md:grid-cols-4 gap-3">
+          <input
+            id="nom"
+            placeholder="Nom"
+            required
+            class="border p-2 rounded"
+          />
+          <input
+            id="prenom"
+            placeholder="Prénom"
+            required
+            class="border p-2 rounded"
+          />
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            required
+            class="border p-2 rounded"
+          />
+          <button class="bg-blue-600 text-white rounded">Ajouter</button>
+        </form>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h2 class="text-lg font-semibold mb-3">Liste des Adhérents</h2>
+
+        <table class="w-full border">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border p-2">Nom</th>
+              <th class="border p-2">Prénom</th>
+              <th class="border p-2">Email</th>
+              <th class="border p-2">Inscription</th>
+              <th class="border p-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adherentsTable"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
