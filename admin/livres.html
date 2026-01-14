@@ -7,7 +7,9 @@
     <script src="livres.js" defer></script>
   </head>
   <body class="bg-gray-100 min-h-screen">
-    <nav class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+    <nav
+      class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center"
+    >
       <span class="font-bold">Gestion des Livres</span>
       <div class="space-x-3">
         <a href="dashboard.html" class="underline">Dashboard</a>
@@ -21,19 +23,19 @@
       <div class="bg-white p-4 rounded shadow mb-6">
         <h2 class="text-lg font-semibold mb-3">Ajouter un Livre</h2>
 
-        <form id="bookForm" class="grid grid-cols-1 md:grid-cols-5 gap-3">
+        <form id="bookForm" class="grid grid-cols-1 md:grid-cols-6 gap-3">
           <input
             id="titre"
             placeholder="Titre"
             required
             class="border p-2 rounded"
           />
-          <input
-            id="auteur"
-            placeholder="Auteur"
-            required
-            class="border p-2 rounded"
-          />
+          <select id="auteurId" required class="border p-2 rounded">
+            <option value="">Sélectionner un auteur</option>
+          </select>
+          <select id="categoryId" required class="border p-2 rounded">
+            <option value="">Sélectionner une catégorie</option>
+          </select>
           <input
             id="annee"
             type="number"
@@ -62,6 +64,7 @@
             <tr>
               <th class="border p-2">Titre</th>
               <th class="border p-2">Auteur</th>
+              <th class="border p-2">Catégorie</th>
               <th class="border p-2">Année</th>
               <th class="border p-2">Quantité</th>
               <th class="border p-2">Actions</th>

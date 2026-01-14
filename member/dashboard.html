@@ -40,8 +40,8 @@
     <script>
       const user = JSON.parse(localStorage.getItem("currentUser"));
 
-      if (user === undefined || user.role !== "MEMBER") {
-        window.location.href = "index.html";
+      if (!user || user.role !== "MEMBER") {
+        window.location.href = "../login/login.html";
       }
 
       document.getElementById("logoutBtn").addEventListener("click", () => {

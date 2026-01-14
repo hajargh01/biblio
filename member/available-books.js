@@ -23,6 +23,7 @@ function renderBooks() {
     row.innerHTML = `
       <td class="border p-2">${livre.titre}</td>
       <td class="border p-2">${livre.auteur}</td>
+      <td class="border p-2">${livre.category || "—"}</td>
       <td class="border p-2">${livre.anneePublication}</td>
       <td class="border p-2">${livre.quantite}</td>
       <td class="border p-2">

@@ -66,10 +66,15 @@ function renderEmprunts() {
     const adherent = db.adherents.find((a) => a.id === e.adherentId);
     const livre = db.livres.find((l) => l.id === e.livreId);
 
+    const adherentName = adherent
+      ? `${adherent.nom} ${adherent.prenom}`
+      : "Unknown Adherent";
+    const livreTitle = livre ? livre.titre : "Unknown Book";
+
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td class="border p-2">${adherent.nom} ${adherent.prenom}</td>
-      <td class="border p-2">${livre.titre}</td>
+      <td class="border p-2">${adherentName}</td>
+      <td class="border p-2">${livreTitle}</td>
       <td class="border p-2">${e.dateEmprunt}</td>
       <td class="border p-2">${e.dateRetourPrevue}</td>
       <td class="border p-2">${e.rendu ? "Rendu" : "En cours"}</td>

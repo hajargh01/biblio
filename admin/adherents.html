@@ -22,7 +22,7 @@
       <div class="bg-white p-4 rounded shadow mb-6">
         <h2 class="text-lg font-semibold mb-3">Ajouter un Adhérent</h2>
 
-        <form id="adherentForm" class="grid grid-cols-1 md:grid-cols-4 gap-3">
+        <form id="adherentForm" class="grid grid-cols-1 md:grid-cols-3 gap-3">
           <input
             id="nom"
             placeholder="Nom"
@@ -42,6 +42,19 @@
             required
             class="border p-2 rounded"
           />
+          <input
+            id="username"
+            placeholder="Username"
+            required
+            class="border p-2 rounded"
+          />
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            required
+            class="border p-2 rounded"
+          />
           <button class="bg-indigo-600 text-white rounded">Ajouter</button>
         </form>
       </div>
@@ -55,6 +68,7 @@
               <th class="border p-2">Nom</th>
               <th class="border p-2">Prénom</th>
               <th class="border p-2">Email</th>
+              <th class="border p-2">Username</th>
               <th class="border p-2">Inscription</th>
               <th class="border p-2">Actions</th>
             </tr>

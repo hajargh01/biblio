@@ -16,7 +16,15 @@ const db = {
   livres: [],
   auteurs: [],
   categories: [],
-  adherents: [],
+  adherents: [
+    {
+      id: 2,
+      nom: "Member",
+      prenom: "User",
+      email: "member@example.com",
+      dateInscription: "2026-01-01",
+    },
+  ],
   emprunts: [],
 };
 
