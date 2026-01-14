@@ -6,19 +6,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 min-h-screen">
-    <nav class="bg-green-700 text-white px-6 py-4 flex justify-between">
+    <nav
+      class="bg-blue-800 text-white px-6 py-4 flex justify-between items-center"
+    >
       <span class="font-bold">Member Dashboard</span>
       <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
         Logout
       </button>
     </nav>
 
-    <main class="p-6">
+    <main class="p-6 px-32">
       <h1 class="text-2xl font-semibold mb-4">Welcome</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-white p-4 rounded shadow">Available Books</div>
-        <div class="bg-white p-4 rounded shadow">My Emprunts</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a href="available-books.html" class="mx-auto w-full text-center">
+            <div class="bg-white p-4 rounded shadow space-y-4">
+              <img src="../images/stack-of-books.png" class="h-24 mx-auto" />
+              <h3 class="font-bold text-2xl">Available Books</h3>
+            </div>
+          </a>
+
+          <a href="my-emprunts.html" class="mx-auto w-full text-center">
+            <div class="bg-white p-4 rounded shadow space-y-4">
+              <img src="../images/borrow.png" class="h-24 mx-auto" />
+              <h3 class="font-bold text-2xl">My Emprunts</h3>
+            </div>
+          </a>
+        </div>
       </div>
     </main>
 

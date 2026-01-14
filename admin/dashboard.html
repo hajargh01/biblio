@@ -4,34 +4,65 @@
     <meta charset="UTF-8" />
     <title>Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 min-h-screen">
-    <nav class="bg-blue-700 text-white px-6 py-4 flex justify-between">
+    <nav
+      class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center"
+    >
       <span class="font-bold">Admin Dashboard</span>
       <button id="logoutBtn" class="bg-red-500 px-4 py-1 rounded">
         Logout
       </button>
     </nav>
 
-    <main class="p-6">
+    <main class="py-6 px-32">
       <h1 class="text-2xl font-semibold mb-4">Administration</h1>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <a href="livres.html">
-          <div class="bg-white p-4 rounded shadow">Manage Livres</div>
-        </a>
-        <a href="auteurs.html">
-          <div class="bg-white p-4 rounded shadow">Manage Auteurs</div>
-        </a>
-        <a href="categories.html">
-          <div class="bg-white p-4 rounded shadow">Manage Catégories</div>
-        </a>
-        <a href="adherents.html">
-          <div class="bg-white p-4 rounded shadow">Manage Adhérents</div>
+        <a href="livres.html" class="mx-auto w-full text-center">
+          <div class="bg-white p-4 rounded shadow space-y-4">
+            <img src="../images/stack-of-books.png" class="h-24 mx-auto" />
+            <h3 class="font-bold text-2xl">Manage Books</h3>
+          </div>
         </a>
 
-        <a href="emprunts.html">
-          <div class="bg-white p-4 rounded shadow">Manage Emprunts</div>
+        <a href="auteurs.html" class="mx-auto w-full text-center">
+          <div class="bg-white p-4 rounded shadow space-y-4">
+            <img src="../images/editor.png" class="h-24 mx-auto" />
+            <h3 class="font-bold text-2xl">Manage Authors</h3>
+          </div>
+        </a>
+
+        <a href="categories.html" class="mx-auto w-full text-center">
+          <div class="bg-white p-4 rounded shadow space-y-4">
+            <img src="../images/menu.png" class="h-24 mx-auto" />
+            <h3 class="font-bold text-2xl">Manage Categories</h3>
+          </div>
+        </a>
+
+        <a href="adherents.html" class="mx-auto w-full text-center">
+          <div class="bg-white p-4 rounded shadow space-y-4">
+            <img src="../images/reading.png" class="h-24 mx-auto" />
+            <h3 class="font-bold text-2xl">Manage Members</h3>
+          </div>
+        </a>
+
+        <a href="emprunts.html" class="mx-auto w-full text-center">
+          <div class="bg-white p-4 rounded shadow space-y-4">
+            <img src="../images/borrow.png" class="h-24 mx-auto" />
+            <h3 class="font-bold text-2xl">Manage Loans</h3>
+          </div>
         </a>
       </div>
     </main>

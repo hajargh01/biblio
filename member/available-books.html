@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Available Books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="available-books.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-800 text-white px-6 py-4 flex justify-between items-center">
+      <span class="font-bold">Available Books</span>
+      <a href="dashboard.html" class="underline">Dashboard</a>
+    </nav>
+
+    <main class="p-6">
+      <div class="bg-white p-4 rounded shadow">
+        <table class="w-full border">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border p-2">Title</th>
+              <th class="border p-2">Author</th>
+              <th class="border p-2">Year</th>
+              <th class="border p-2">Stock</th>
+              <th class="border p-2">Action</th>
+            </tr>
+          </thead>
+          <tbody id="booksTable"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

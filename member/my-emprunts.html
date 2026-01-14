@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Emprunts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="my-emprunts.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-800 text-white px-6 py-4 flex justify-between items-center">
+      <span class="font-bold">My Emprunts</span>
+      <a href="dashboard.html" class="underline">Dashboard</a>
+    </nav>
+
+    <main class="p-6">
+      <div class="bg-white p-4 rounded shadow">
+        <table class="w-full border">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="border p-2">Book</th>
+              <th class="border p-2">Borrowed On</th>
+              <th class="border p-2">Return Due</th>
+              <th class="border p-2">Status</th>
+            </tr>
+          </thead>
+          <tbody id="empruntsTable"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
